@@ -41,7 +41,7 @@ else:
     # --- Initialize Groq Client and Set Model ---
     try:
         client = Groq(api_key=st.session_state.groq_api_key)
-        MODEL_ID = "llama3-70b-8192"
+        MODEL_ID = "llama-4-scout-17b-16e-instruct"
     except Exception as e:
         st.error(f"Failed to initialize Groq client: {e}")
         st.stop()
@@ -88,3 +88,4 @@ else:
 
             except Exception as e:
                 st.error(f"An error occurred: {e}", icon="🚨")
+
