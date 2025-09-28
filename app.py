@@ -3,13 +3,13 @@ from groq import Groq
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="Maddy's Chatbot",
+    page_title="AI Chatbot",
     page_icon="💬",
     layout="centered",
 )
 
 # --- App Title ---
-st.title("💬 Maddy's Chatbot")
+st.title("💬 AI Chatbot")
 
 # --- Groq API Key Management ---
 if "groq_api_key" not in st.session_state:
@@ -18,8 +18,7 @@ if "groq_api_key" not in st.session_state:
 def set_api_key(api_key):
     st.session_state.groq_api_key = api_key
 
-# --- System Prompt ---
-SYSTEM_PROMPT = "You are a digital version of Maddy. You are a friendly and helpful chatbot."
+SYSTEM_PROMPT = " Your name is Maddy. You are a friendly and helpful assistant."
 
 # --- UI for API Key Input ---
 if not st.session_state.groq_api_key:
@@ -88,7 +87,3 @@ else:
 
             except Exception as e:
                 st.error(f"An error occurred: {e}", icon="🚨")
-
-
-
-
