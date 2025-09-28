@@ -24,7 +24,7 @@ SYSTEM_PROMPT = "You are a digital version of Maddy. You are a friendly and help
 # --- UI for API Key Input ---
 if not st.session_state.groq_api_key:
     st.subheader("Enter Your Groq API Key")
-    st.markdown("To get your API key, visit [https://console.groq.com/keys](https://console.groq.com/keys)")
+    st.markdown("To get your API key, visit [Groq Console](https://console.groq.com/keys)")
     
     groq_api_key_input = st.text_input("Groq API Key", type="password")
     
@@ -88,6 +88,7 @@ else:
 
             except Exception as e:
                 st.error(f"An error occurred: {e}", icon="🚨")
+
 
 
 
